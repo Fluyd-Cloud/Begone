@@ -3,6 +3,9 @@
 - title: Démarchage
   tags:
     - spam
+    - metropolitan
+    - france
+    - métropolitaine
   numbers:
     - '+33 1 62 ## ## ##'
     - '+33 1 63 ## ## ##'
@@ -16,6 +19,19 @@
     - '+33 5 69 ## ## ##'
     - '+33 9 48 ## ## ##'
     - '+33 9 49 ## ## ##'
+
+- title: Démarchage
+  tags:
+    - spam
+    - drom
+    - départements et régions d'outre-mer
+    - france
+  numbers:
+    - '+590 9 47 5# ## ##'
+    - '+594 9 47 6# ## ##'
+    - '+596 9 47 7# ## ##'
+    - '+262 9 47 8# ## ##'
+    - '+262 9 47 9# ## ##'
 
 - title: OnOff
   tags:
