@@ -24,6 +24,9 @@ below:
       - [Ubicentrex Numbers][list-ubicentrex]
       - [BJT Partners Numbers][list-bjt]
       - [Kavkom Numbers][list-kavkom]
+      - [Destiny Numbers][list-destiny]
+      - [Spartel Numbers][list-spartel]
+      - [Get & Go Telecom Numbers][list-getandgo]
    - [Prepaid Numbers][list-prepaid]
      - [Lyca Numbers][list-lyca]
    - [Complete List][list-all]
@@ -76,4 +79,6 @@ Whenever you update the files in the `dist/` directory, increment the `begone.ve
 [list-kavkom]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-kavcom.xml
 [list-prepaid]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-prepaid.xml
 [list-lyca]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-lyca.xml
+[list-destiny]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-destiny.xml
 [list-spartel]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-spartel.xml
+[list-getandgo]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-getandgo.xml

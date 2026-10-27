@@ -65,3 +65,10 @@
     - spartel
   asn:
     - SPAR
+
+- title: Get & Go Telecom
+  tags:
+    - voip
+    - getandgo
+  asn:
+    - GETG
