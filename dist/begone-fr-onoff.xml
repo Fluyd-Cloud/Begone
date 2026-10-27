@@ -8,6 +8,66 @@
 		<key>category</key>
 		<string>0</string>
 		<key>number</key>
+		<string>+33159175###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33159176###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33159177###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33159178###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33159179###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+3315931####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
 		<string>+33189620###</string>
 		<key>title</key>
 		<string>OnOff</string>
@@ -108,7 +168,67 @@
 		<key>category</key>
 		<string>0</string>
 		<key>number</key>
+		<string>+3321886####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
 		<string>+3325950####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33339661###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33339662###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33339663###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33339664###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33339665###</string>
 		<key>title</key>
 		<string>OnOff</string>
 	</dict>
@@ -138,6 +258,56 @@
 		<key>category</key>
 		<string>0</string>
 		<key>number</key>
+		<string>+33412061###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33412062###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33412063###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33412064###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33412065###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
 		<string>+3341233####</string>
 		<key>title</key>
 		<string>OnOff</string>
@@ -149,6 +319,56 @@
 		<string>0</string>
 		<key>number</key>
 		<string>+3345145####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33516434###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33516435###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33516436###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33516437###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33516438###</string>
 		<key>title</key>
 		<string>OnOff</string>
 	</dict>
@@ -278,6 +498,96 @@
 		<key>category</key>
 		<string>0</string>
 		<key>number</key>
+		<string>+3375490####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+3375491####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+3375492####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+3375493####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+3375494####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+3375495####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+3375496####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+3375497####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+3375498####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
 		<string>+337568#####</string>
 		<key>title</key>
 		<string>OnOff</string>
@@ -349,6 +659,36 @@
 		<string>0</string>
 		<key>number</key>
 		<string>+337809#####</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33972048###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+33972049###</string>
+		<key>title</key>
+		<string>OnOff</string>
+	</dict>
+	<dict>
+		<key>addNational</key>
+		<string>true</string>
+		<key>category</key>
+		<string>0</string>
+		<key>number</key>
+		<string>+3397349####</string>
 		<key>title</key>
 		<string>OnOff</string>
 	</dict>
