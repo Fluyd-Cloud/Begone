@@ -1,3 +1,3 @@
-"""Convert a YAML database to a Begone export file."""
+"""Begone blocking lists for French numbers."""
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

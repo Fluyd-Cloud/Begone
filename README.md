@@ -18,18 +18,20 @@ below:
 1. Long press on the link of the desired list below and select
    **Download Linked File**.
 
-   - [Spam Numbers][list-spam] (recommended)
-   - [VOIP Numbers][list-voip]
-      - [OnOff Numbers][list-onoff]
-      - [Ubicentrex Numbers][list-ubicentrex]
-      - [BJT Partners Numbers][list-bjt]
-      - [Kavkom Numbers][list-kavkom]
-      - [Destiny Numbers][list-destiny]
-      - [Spartel Numbers][list-spartel]
-      - [Get & Go Telecom Numbers][list-getandgo]
-   - [Prepaid Numbers][list-prepaid]
-     - [Lyca Numbers][list-lyca]
-   - [Complete List][list-all]
+   <!-- lists:start -->
+   - [Spam Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-demarchage.xml) (recommended)
+   - [VOIP Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-voip.xml)
+     - [OnOff Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-onoff.xml)
+     - [Ubicentrex Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-ubicentrex.xml)
+     - [BJT Partners Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-bjt.xml)
+     - [Kavkom Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-kavcom.xml)
+     - [Destiny Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-destiny.xml)
+     - [Spartel Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-spartel.xml)
+     - [Get & Go Telecom Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-getandgo.xml)
+   - [Prepaid Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-prepaid.xml)
+     - [Lyca Numbers](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-lyca.xml)
+   - [Complete List](https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-full.xml)
+   <!-- lists:end -->
 
 2. Open the Begone application and select **Import New Numbers**.
 
@@ -41,13 +43,11 @@ below:
 
 ### Setting Up the Development Environment
 
-1. Create a new Python virtual environment and install the necessary
-   dependencies.
+1. Install [uv](https://docs.astral.sh/uv/), then create the virtual
+   environment and install the dependencies.
 
    ```bash
-   uv venv
-   uv sync
-   # or run 'make init'
+   make init
    ```
 
 2. Activate the virtual environment.
@@ -56,29 +56,39 @@ below:
    source .venv/bin/activate
    ```
 
-### Adding New Numbers to the Blocking List
+### Adding an Operator
 
-1. Update the `data/numbers.yaml` file with the new numbers you wish to block.
+1. Find the ARCEP operator code (mnemo) from one of its numbers:
 
-2. Run `make` to generate the new lists in the `dist` folder.
+   ```bash
+   begone lookup "01 87 68 68 87"
+   # GETG  +33187680000 - +33187689999
+   ```
 
-### Release a new version
+2. In `data/numbers.yaml`, add the operator under `operators` with its
+   `mnemos` (or explicit `numbers` patterns, `#` being any digit), and a list
+   under `lists` for its new tag.
 
-Whenever you update the files in the `dist/` directory, increment the `begone.version` file as follows:
+3. Run `make build` to fetch the ARCEP ranges and regenerate the `dist/` lists
+   and the download links of this README.
 
-1. Version: Increment the number on the first line for structural changes or modifications to the operator data source.
-2. Build Number: Always increment the number on the second line with every update.
+4. Bump the version with `begone bump --structural`.
+
+Anyone can also [report an operator](https://github.com/Fluyd-Cloud/Begone/issues/new?template=operator.yml).
+
+### Checks
+
+Run `make lint test check` before opening a pull request. The CI runs the same
+checks on every pull request.
+
+### Updates and Releases
+
+- Every week, the `Refresh lists` workflow regenerates the lists from the
+  latest ARCEP data and opens a pull request with a summary of the changes.
+- The `begone.version` file holds the version of the lists (first line, bumped
+  on structural changes such as a new operator) and the build number (second
+  line, bumped on every update).
+- When a new version reaches `main`, the `Release` workflow tags it and
+  publishes a GitHub release with the lists.
 
 [begone-app]: https://apps.apple.com/fr/app/id1596818195
-[list-all]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-full.xml
-[list-spam]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-demarchage.xml
-[list-voip]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-voip.xml
-[list-onoff]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-onoff.xml
-[list-ubicentrex]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-ubicentrex.xml
-[list-bjt]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-bjt.xml
-[list-kavkom]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-kavcom.xml
-[list-prepaid]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-prepaid.xml
-[list-lyca]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-lyca.xml
-[list-destiny]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-destiny.xml
-[list-spartel]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-spartel.xml
-[list-getandgo]: https://raw.githubusercontent.com/Fluyd-Cloud/Begone/refs/heads/main/dist/begone-fr-getandgo.xml

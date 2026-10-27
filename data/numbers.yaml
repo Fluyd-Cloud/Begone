@@ -1,74 +1,129 @@
 ---
-# Source: https://www.arcep.fr/uploads/tx_gsavis/22-1583.pdf
-- title: Démarchage
-  tags:
-    - spam
-  numbers:
-    - '+33 1 62 ## ## ##'
-    - '+33 1 63 ## ## ##'
-    - '+33 2 70 ## ## ##'
-    - '+33 2 71 ## ## ##'
-    - '+33 3 77 ## ## ##'
-    - '+33 3 78 ## ## ##'
-    - '+33 4 24 ## ## ##'
-    - '+33 4 25 ## ## ##'
-    - '+33 5 68 ## ## ##'
-    - '+33 5 69 ## ## ##'
-    - '+33 9 48 ## ## ##'
-    - '+33 9 49 ## ## ##'
+# Lists published in dist/, by tag. File names are public download URLs:
+# never rename them. The order below is the order of the README.
+lists:
+  spam:
+    file: begone-fr-demarchage.xml
+    title: Spam Numbers
+    recommended: true
+  voip:
+    file: begone-fr-voip.xml
+    title: VOIP Numbers
+  onoff:
+    file: begone-fr-onoff.xml
+    title: OnOff Numbers
+    parent: voip
+  ubicentrex:
+    file: begone-fr-ubicentrex.xml
+    title: Ubicentrex Numbers
+    parent: voip
+  bjt:
+    file: begone-fr-bjt.xml
+    title: BJT Partners Numbers
+    parent: voip
+  kavkom:
+    file: begone-fr-kavcom.xml
+    title: Kavkom Numbers
+    parent: voip
+  destiny:
+    file: begone-fr-destiny.xml
+    title: Destiny Numbers
+    parent: voip
+  spartel:
+    file: begone-fr-spartel.xml
+    title: Spartel Numbers
+    parent: voip
+  getandgo:
+    file: begone-fr-getandgo.xml
+    title: Get & Go Telecom Numbers
+    parent: voip
+  prepaid:
+    file: begone-fr-prepaid.xml
+    title: Prepaid Numbers
+  lyca:
+    file: begone-fr-lyca.xml
+    title: Lyca Numbers
+    parent: prepaid
+  all:
+    file: begone-fr-full.xml
+    title: Complete List
 
-- title: OnOff
-  tags:
-    - voip
-    - onoff
-  asn:
-    - 'ONOF'
+# Sources of numbers. `numbers` are explicit patterns (# is a wildcard digit),
+# `mnemos` are ARCEP operator codes whose ranges are fetched from data.gouv.fr
+# (find one from a phone number with `begone lookup <number>`).
+operators:
+  # Source: https://www.arcep.fr/uploads/tx_gsavis/22-1583.pdf
+  - title: Démarchage
+    tags:
+      - spam
+    numbers:
+      - '+33 1 62 ## ## ##'
+      - '+33 1 63 ## ## ##'
+      - '+33 2 70 ## ## ##'
+      - '+33 2 71 ## ## ##'
+      - '+33 3 77 ## ## ##'
+      - '+33 3 78 ## ## ##'
+      - '+33 4 24 ## ## ##'
+      - '+33 4 25 ## ## ##'
+      - '+33 5 68 ## ## ##'
+      - '+33 5 69 ## ## ##'
+      - '+33 9 48 ## ## ##'
+      - '+33 9 49 ## ## ##'
 
-- title: Ubicentrex
-  tags:
-    - voip
-    - ubicentrex
-  asn:
-    - 'UBIC'
+  - title: OnOff
+    tags:
+      - voip
+      - onoff
+    mnemos:
+      - ONOF
 
-- title: Lyca
-  tags:
-    - prepaid
-    - lyca
-  asn:
-    - LYCA
+  - title: Ubicentrex
+    tags:
+      - voip
+      - ubicentrex
+    mnemos:
+      - UBIC
 
-- title: BJT Partners
-  tags:
-    - voip
-    - bjt
-  asn:
-    - BJTP
+  - title: Lyca
+    tags:
+      - prepaid
+      - lyca
+    mnemos:
+      - LYCA
 
-- title: Kavkom
-  tags:
-    - voip
-    - kavkom
-  asn:
-    - KAVE
+  - title: BJT Partners
+    tags:
+      - voip
+      - bjt
+    mnemos:
+      - BJTP
 
-- title: Destiny
-  tags:
-    - voip
-    - destiny
-  asn:
-    - OPEN
+  - title: Kavkom
+    tags:
+      - voip
+      - kavkom
+    mnemos:
+      - KAVE
 
-- title: Spartel
-  tags:
-    - voip
-    - spartel
-  asn:
-    - SPAR
+  # Ping calls.
+  - title: Destiny
+    tags:
+      - voip
+      - destiny
+    mnemos:
+      - OPEN
 
-- title: Get & Go Telecom
-  tags:
-    - voip
-    - getandgo
-  asn:
-    - GETG
+  # Abusive calls.
+  - title: Spartel
+    tags:
+      - voip
+      - spartel
+    mnemos:
+      - SPAR
+
+  - title: Get & Go Telecom
+    tags:
+      - voip
+      - getandgo
+    mnemos:
+      - GETG
