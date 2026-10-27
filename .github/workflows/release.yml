@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+    paths: [begone.version]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tag and publish the version if it is new
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version=$(head -n 1 begone.version)
+          if git ls-remote --exit-code --tags origin "refs/tags/$version" > /dev/null; then
+            echo "$version is already released"
+            exit 0
+          fi
+          gh release create "$version" dist/*.xml \
+            --target "$GITHUB_SHA" --title "$version" --generate-notes
