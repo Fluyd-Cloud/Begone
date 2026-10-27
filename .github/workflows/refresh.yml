@@ -1,0 +1,48 @@
+name: Refresh lists
+
+on:
+  schedule:
+    - cron: "17 4 * * 1" # every Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --locked
+      - run: cp -r dist "$RUNNER_TEMP/previous-dist"
+      - name: Build lists from ARCEP data
+        run: uv run begone --verbose build
+      - name: Summarize changes
+        id: changes
+        run: |
+          if git diff --quiet -- dist README.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          uv run begone bump
+          {
+            echo "summary<<EOF"
+            uv run begone diff "$RUNNER_TEMP/previous-dist"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+      - if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: refresh-lists
+          delete-branch: true
+          commit-message: "chore: refresh lists from ARCEP data"
+          title: "chore: refresh lists from ARCEP data"
+          body: |
+            Regeneration of the lists from the latest ARCEP data.
+
+            ${{ steps.changes.outputs.summary }}

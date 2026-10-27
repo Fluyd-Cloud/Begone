@@ -1,0 +1,29 @@
+name: Report an operator
+description: Suggest blocking the numbers of an operator used for unwanted calls.
+title: "Block operator: "
+labels: [operator]
+body:
+  - type: input
+    id: number
+    attributes:
+      label: Example number
+      description: A number that called you. Its operator is found from it.
+      placeholder: 01 87 68 68 87
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of calls
+      options:
+        - Telemarketing
+        - Ping calls (one ring, then hang up)
+        - Abusive or scam calls
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Anything useful, e.g. how often, other numbers, operator name.
